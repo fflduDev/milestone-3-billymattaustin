@@ -56,5 +56,11 @@ public class GraphNode {
 		paths.put(neighbor, weight);
 		return true;
 	}
-	
+	public void printNeighbors() {
+		for (GraphNode nbr : getNeighbors()) {
+		Integer d = getDistanceToNeighbor(nbr);
+	    System.out.println(nbr.getValue() + " -> " + d);
+		}
+	}
+
 }
